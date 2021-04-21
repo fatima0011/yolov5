@@ -5,6 +5,12 @@ from playsound import playsound
 from datetime import datetime
 import time
 
+# apt install mpg123  -------------- for raspberrypi
+# import os
+# file = "file.mp3"
+# os.system("mpg123 " + file)
+
+
 LAST_TIME = datetime.now()
 LABELS = ['stairs', 'chair', 'table', 'toilet sign', 'admin office']
 
