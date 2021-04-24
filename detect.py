@@ -118,14 +118,14 @@ def detect(save_img=False):
                         label = f'{names[int(cls)]} {conf:.2f}'
                         plot_label(xyxy, im0, label, colors[int(cls)], 3, names[int(cls)])
             
-                play_sound(play_labels)
+                play_sound(play_labels, im0)
             # Print time (inference + NMS)
             print(f'{s}Done. ({t2 - t1:.3f}s)')
 
             # Stream results
-            if view_img:
-                cv2.imshow(str(p), im0)
-                cv2.waitKey(1)  # 1 millisecond
+            # if view_img:
+            cv2.imshow(str(p), im0)
+            cv2.waitKey(1)  # 1 millisecond
 
             # Save results (image with detections)
             if save_img:
