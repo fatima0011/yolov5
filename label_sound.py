@@ -13,7 +13,7 @@ from text_detection import detect_text
 
 DETECT_TEXT = True  # will take more time for detection per image
 LAST_TIME = datetime.now()
-LABELS = ['stairs', 'chair', 'table', 'toilet sign', 'admin office']
+LABELS = ['stairs', 'chair', 'table', 'toilet sign', 'admin office', 'person']
 
 
 def plot_label(xyxy, im0, text, color, line_thickness, label):

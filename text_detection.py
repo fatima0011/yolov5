@@ -10,8 +10,11 @@ except ImportError:
     import Image
 import pytesseract
 
+
+
 if 'windows' ==  platform.system().lower():
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Users\uali1\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+    tesseract_path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    pytesseract.pytesseract.tesseract_cmd = tesseract_path
 
 TEXT_LABELS = ['sir office', 'cafe']
 
@@ -19,8 +22,11 @@ def detect_text(img):
     print("--Detecting text--")
     labels = []
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    data = pytesseract.image_to_string(img_rgb).lower()
-    for label in TEXT_LABELS:
-        if label in data:
-            labels.append(label)
+    try:
+        data = pytesseract.image_to_string(img_rgb, lang='eng').lower()
+        for label in TEXT_LABELS:
+            if label in data:
+                labels.append(label)
+    except Exception as e:
+        print(e)
     return labels
