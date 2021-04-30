@@ -1,0 +1,34 @@
+/////////////////////////// to run on computer
+programms/ libraries required to run this project
+	1-pyhton, 2-pip
+
+1 - Open terminal in any folder
+2 - Run command : git clone https://github.com/hamza-saqib/yolov5.git
+3 - Move to yolov5 folder where code is downloaded using cd command : cd yolov5
+4 - pip3 install torch==1.8.1+cpu torchvision==0.9.1+cpu torchaudio===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+
+5 - In case of windows:
+	1- Downlaod and install pytesseract from following link https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20201127.exe
+	2- Create enviornmental variable named TESSDATA_PREFIX: C:\Program Files\Tesseract-OCR\tessdata. Or where it is installed.
+6 - In case of Linux/Pi run following commands:
+	1- sudo apt-get update
+	2- sudo apt-get install libleptonica-dev 
+	3- sudo apt-get install tesseract-ocr tesseract-ocr-dev
+	4- sudo apt-get install libtesseract-dev
+
+7 - pip3 install tesseract
+8 - pip3 install tesseract-ocr
+9 - Install pyhton requirments using command : pip install -r requirements.txt
+
+
+/////////////////////////// To run on ressbery pi
+1- Start resberry pi
+2- Open terminal
+3- run following command:  
+	1- cd Downloads/yolov5
+	2- source ../yolov3/env/bin/activate   # activate the python enviornment.
+	3- python detect.py --source 0   # this will start camera on pi.
+
+to get the latest code from github 
+$ cd Downloads/yolov5   # current yolo directory.
+$ git pull origin master
