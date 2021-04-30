@@ -1,6 +1,6 @@
 /////////////////////////// to run on computer
 programms/ libraries required to run this project
-	1-pyhton, 2-pip
+	1-pyhton 3.9 (latest is better), 2-pip
 
 1 - Open terminal in any folder
 2 - Run command : git clone https://github.com/hamza-saqib/yolov5.git
